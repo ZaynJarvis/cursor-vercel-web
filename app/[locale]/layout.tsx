@@ -1,36 +1,53 @@
 import { Inter } from 'next/font/google';
 import { notFound } from 'next/navigation';
 import { NextIntlClientProvider } from 'next-intl';
-import { ReactNode } from 'react';
+import { unstable_setRequestLocale } from 'next-intl/server';
+import type { Metadata } from 'next';
 
 const inter = Inter({ subsets: ['latin'] });
 
+async function getMessages(locale: string) {
+  try {
+    return (await import(`../../messages/${locale}.json`)).default;
+  } catch (error) {
+    notFound();
+  }
+}
+
 export function generateStaticParams() {
-  return [{ locale: 'en' }, { locale: 'zh' }];
+  // Ensure this matches the locales used everywhere else
+  return [{ locale: 'en' }, { locale: 'zh' }]; 
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const messages = await getMessages(locale);
+  
+  return {
+    title: messages?.metadata?.title ?? 'Default Title',
+    description: messages?.metadata?.description ?? 'Default Description',
+  };
 }
 
 export default async function LocaleLayout({
   children,
-  params
+  params,
 }: {
-  children: ReactNode;
-  params: { locale: string };
+  children: React.ReactNode;
+  // Type params as a Promise according to the error message for Next.js 15
+  params: Promise<{ locale: string }>; 
 }) {
-  const locale = await Promise.resolve(params.locale);
-  let messages;
-  try {
-    messages = (await import(`../../messages/${locale}.json`)).default;
-  } catch (error) {
-    notFound();
-  }
+  const { locale } = await params; 
+  unstable_setRequestLocale(locale); // Call setRequestLocale
+  const messages = await getMessages(locale);
 
   return (
-    <html lang={locale}>
-      <body className={inter.className}>
-        <NextIntlClientProvider locale={locale} messages={messages}>
-          {children}
-        </NextIntlClientProvider>
-      </body>
-    </html>
+    <NextIntlClientProvider locale={locale} messages={messages}>
+      {children}
+    </NextIntlClientProvider>
   );
 } 

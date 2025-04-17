@@ -22,8 +22,9 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // We don't set lang here as it will be handled by next-intl in the locale layout
   return (
-    <html lang="en" className="scroll-smooth">
+    <html className="scroll-smooth">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
       >

@@ -54,7 +54,7 @@ export default function Navigation() {
           {/* Mobile Language Switcher */}
           <div className="md:hidden">
             <Link
-              href={`/${currentLocale === 'en' ? 'cn' : 'en'}${pathname.substring(3)}`}
+              href={`/${currentLocale === 'en' ? 'zh' : 'en'}${pathname.substring(3)}`}
               className="px-[0.75rem] py-[0.5rem] text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors"
             >
               {currentLocale === 'en' ? '中文' : 'EN'}
