@@ -1,11 +1,15 @@
 {
+  "metadata": {
+    "title": "刘智恒 | 软件工程师",
+    "description": "TikTok软件工程师，专注于可扩展系统、视频分发优化和高性能基础设施。精通Go、Rust和分布式系统。"
+  },
   "navigation": {
     "home": "首页",
     "about": "关于",
     "projects": "项目"
   },
   "hero": {
-    "title": "{name}",
+    "title": "刘智恒",
     "subtitle": "TikTok 软件工程师",
     "description": "专注于构建可扩展系统和优化基础设施。目前致力于 TikTok 的视频分发和存储优化系统。",
     "cta": "查看我的作品"

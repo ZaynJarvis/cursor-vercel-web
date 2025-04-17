@@ -7,7 +7,9 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "generate-sitemap": "node scripts/generate-sitemap.js",
+    "build:with-sitemap": "npm run generate-sitemap && next build"
   },
   "dependencies": {
     "clsx": "^2.1.0",

@@ -9,7 +9,7 @@ export default function Hero() {
   const t = useTranslations();
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden" aria-labelledby="hero-heading">
       {/* Animated background */}
       <motion.div
         className="absolute inset-0 bg-gradient-to-br from-orange-50 via-white to-gray-50"
@@ -29,7 +29,7 @@ export default function Hero() {
             ease: "linear"
           }}
         >
-          <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-5" />
+          <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-5" aria-hidden="true" />
         </motion.div>
       </motion.div>
 
@@ -55,28 +55,31 @@ export default function Hero() {
                     repeat: Infinity,
                     ease: "easeInOut"
                   }}
+                  aria-hidden="true"
                 />
                 <Image
                   src="/profile.jpg"
-                  alt="Profile"
+                  alt="Liu Zhiheng - Senior Software Engineer at TikTok specializing in scalable systems"
                   width={280}
                   height={280}
                   className="rounded-full relative border-4 border-white shadow-xl"
+                  priority
                 />
               </div>
             </div>
             
-            <motion.div
+            <motion.nav
               className="flex justify-center space-x-8"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
+              aria-label="Social media links"
             >
               {[
-                { icon: FaGithub, href: "https://github.com/zaynjarvis", label: "GitHub" },
-                { icon: FaLinkedin, href: "https://www.linkedin.com/in/zhihengliu/", label: "LinkedIn" },
-                { icon: FaEnvelope, href: "mailto:zaynjarvis@gmail.com", label: "Email" },
-                { icon: FaPhone, href: "tel:+6583099012", label: "Phone" }
+                { icon: FaGithub, href: "https://github.com/zaynjarvis", label: "GitHub profile of Liu Zhiheng" },
+                { icon: FaLinkedin, href: "https://www.linkedin.com/in/zhihengliu/", label: "LinkedIn profile of Liu Zhiheng" },
+                { icon: FaEnvelope, href: "mailto:zaynjarvis@gmail.com", label: "Email Liu Zhiheng" },
+                { icon: FaPhone, href: "tel:+6583099012", label: "Call Liu Zhiheng" }
               ].map((social) => (
                 <motion.a
                   key={social.label}
@@ -86,12 +89,13 @@ export default function Hero() {
                   className="group relative p-2"
                   whileHover={{ y: -3 }}
                   transition={{ duration: 0.2 }}
+                  aria-label={social.label}
                 >
-                  <div className="absolute -inset-2 bg-gradient-to-r from-orange-400 to-orange-600 rounded-lg opacity-0 group-hover:opacity-20 transition-opacity blur" />
+                  <div className="absolute -inset-2 bg-gradient-to-r from-orange-400 to-orange-600 rounded-lg opacity-0 group-hover:opacity-20 transition-opacity blur" aria-hidden="true" />
                   <social.icon size={28} className="text-gray-700 group-hover:text-orange-600 transition-colors relative" />
                 </motion.a>
               ))}
-            </motion.div>
+            </motion.nav>
           </motion.div>
 
           {/* Right side - Text Content */}
@@ -101,19 +105,22 @@ export default function Hero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <motion.div
+            <motion.header
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="space-y-6"
             >
-              <h1 className="text-5xl sm:text-7xl font-bold bg-gradient-to-r from-orange-600 via-orange-500 to-orange-600 bg-clip-text text-transparent pb-2">
+              <h1 
+                id="hero-heading"
+                className="text-5xl sm:text-7xl font-bold bg-gradient-to-r from-orange-600 via-orange-500 to-orange-600 bg-clip-text text-transparent pb-2"
+              >
                 {t('hero.title', { name: 'Liu Zhiheng' })}
               </h1>
-              <h2 className="text-xl sm:text-2xl text-gray-700">
+              <p className="text-xl sm:text-2xl text-gray-700 font-semibold">
                 {t('hero.subtitle')}
-              </h2>
-            </motion.div>
+              </p>
+            </motion.header>
 
             <motion.p
               className="text-lg text-gray-600 leading-relaxed max-w-2xl"
@@ -134,6 +141,7 @@ export default function Hero() {
                 className="inline-block text-white px-8 py-4 rounded-full text-lg font-medium 
                          transition-all hover:shadow-lg hover:scale-105 
                          bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700"
+                aria-label="View my projects"
               >
                 {t('hero.cta')}
               </a>
@@ -154,6 +162,7 @@ export default function Hero() {
           repeat: Infinity,
           ease: "easeInOut"
         }}
+        aria-hidden="true"
       />
       <motion.div
         className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-orange-400 rounded-full mix-blend-multiply filter blur-xl opacity-5"
@@ -166,6 +175,7 @@ export default function Hero() {
           repeat: Infinity,
           ease: "easeInOut"
         }}
+        aria-hidden="true"
       />
     </section>
   );

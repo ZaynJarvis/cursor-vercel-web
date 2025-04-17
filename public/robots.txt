@@ -1,4 +1,6 @@
+# Allow all web crawlers to access all content
 User-agent: *
 Allow: /
 
-Sitemap: https://zaynjarvis.com/sitemap.xml 
+# Tell search engines where to find the sitemap
+Sitemap: https://cursor-vercel-web.vercel.app/sitemap.xml
