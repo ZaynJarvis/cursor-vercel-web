@@ -1,0 +1,69 @@
+{
+  "navigation": {
+    "home": "首页",
+    "about": "关于",
+    "projects": "项目"
+  },
+  "hero": {
+    "title": "{name}",
+    "subtitle": "TikTok 软件工程师",
+    "description": "专注于构建可扩展系统和优化基础设施。目前致力于 TikTok 的视频分发和存储优化系统。",
+    "cta": "查看我的作品"
+  },
+  "about": {
+    "title": "关于我",
+    "description": "我是一名专注于分布式系统和基础设施优化的软件工程师。毕业于南洋理工大学，曾在高盛（金融）和商汤（AI）工作，目前在 TikTok 负责视频基础设施和边缘计算解决方案。",
+    "experience": {
+      "title": "工作经历",
+      "tiktok": {
+        "title": "TikTok 软件工程师",
+        "period": "2021 - 至今",
+        "description": "主导视频分发、边缘计算和存储系统的基础设施优化项目。"
+      },
+      "senseTime": {
+        "title": "商汤 AI 产品工程师",
+        "period": "2020 - 2021",
+        "description": "开发并交付企业级 AI 解决方案。"
+      },
+      "goldman": {
+        "title": "高盛工程实习生",
+        "period": "2020",
+        "description": "参与金融科技解决方案和工程系统开发。"
+      }
+    },
+    "strengths": {
+      "title": "技术专长",
+      "individualization": "系统设计",
+      "command": "基础设施优化",
+      "learner": "边缘计算",
+      "focus": "分布式系统",
+      "maximizer": "性能调优"
+    },
+    "traits": {
+      "title": "工程方法论",
+      "innovative": "系统优化 - 为复杂基础设施挑战找到高效解决方案",
+      "communicative": "技术领导力 - 推动项目从概念到生产环境",
+      "analytical": "数据驱动 - 基于指标和性能分析做出决策",
+      "thoughtful": "架构设计 - 构建可扩展和可维护的系统"
+    }
+  },
+  "projects": {
+    "title": "项目",
+    "vod": {
+      "title": "Omnierse 云边协同系统",
+      "description": "开发了一个促进云边协同的系统，提供可重用的策略优化工具。通过智能工作负载分配提高资源利用率和系统性能。"
+    },
+    "p2p": {
+      "title": "P2P 视频分发 MVP",
+      "description": "主导 TikTok P2P 内容分发网络的 MVP 阶段。成功实现了点对点系统，在保持流媒体质量的同时显著降低服务器成本。"
+    },
+    "storage": {
+      "title": "存储优化引擎",
+      "description": "构建了一个存储优化的数据分析系统，处理大量离线数据以识别和删除不受欢迎的内容，实现显著的存储成本节省。"
+    },
+    "upload": {
+      "title": "TikTok 媒体上传框架",
+      "description": "通过开发边缘上传系统、优化上传调度和系统重构，提升了 TikTok 媒体上传基础设施的上传成功率和性能。"
+    }
+  }
+} 

@@ -1,0 +1,69 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects"
+  },
+  "hero": {
+    "title": "{name}",
+    "subtitle": "Software Engineer at TikTok",
+    "description": "Passionate about building scalable systems and optimizing infrastructure. Currently working on TikTok's video delivery and storage optimization systems.",
+    "cta": "View My Work"
+  },
+  "about": {
+    "title": "About Me",
+    "description": "I'm a software engineer specializing in distributed systems and infrastructure optimization. With a background from Nanyang Technological University, I've worked across finance (Goldman Sachs), AI (SenseTime), and currently at TikTok, where I focus on video infrastructure and edge computing solutions.",
+    "experience": {
+      "title": "Experience",
+      "tiktok": {
+        "title": "Software Engineer at TikTok",
+        "period": "2021 - Present",
+        "description": "Leading infrastructure optimization projects in video delivery, edge computing, and storage systems."
+      },
+      "senseTime": {
+        "title": "AI Product Engineer at SenseTime",
+        "period": "2020 - 2021",
+        "description": "Developed and delivered AI solutions for enterprise clients."
+      },
+      "goldman": {
+        "title": "Engineering Intern at Goldman Sachs",
+        "period": "2020",
+        "description": "Contributed to financial technology solutions and engineering systems."
+      }
+    },
+    "strengths": {
+      "title": "Technical Strengths",
+      "individualization": "System Design",
+      "command": "Infrastructure Optimization",
+      "learner": "Edge Computing",
+      "focus": "Distributed Systems",
+      "maximizer": "Performance Tuning"
+    },
+    "traits": {
+      "title": "Engineering Approach",
+      "innovative": "System Optimization - Finding efficient solutions to complex infrastructure challenges",
+      "communicative": "Technical Leadership - Driving projects from concept to production",
+      "analytical": "Data-Driven - Making decisions based on metrics and performance analysis",
+      "thoughtful": "Architecture Design - Building scalable and maintainable systems"
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "vod": {
+      "title": "Omnierse Cloud-Edge System",
+      "description": "Developed a system facilitating cloud-edge collaboration with reusable tools for strategy optimization. Improved resource utilization and system performance through intelligent workload distribution."
+    },
+    "p2p": {
+      "title": "P2P Video Distribution MVP",
+      "description": "Led the MVP phase of TikTok's P2P content delivery network. Successfully implemented a peer-to-peer system that significantly reduced server costs while maintaining streaming quality."
+    },
+    "storage": {
+      "title": "Storage Optimization Engine",
+      "description": "Built a data analysis system for storage optimization, processing large volumes of offline data to identify and remove unpopular content, resulting in significant storage cost savings."
+    },
+    "upload": {
+      "title": "TikTok Media Upload Framework",
+      "description": "Enhanced TikTok's media upload infrastructure through edge upload system development, upload scheduling optimization, and system refactoring, improving upload success rates and performance."
+    }
+  }
+} 
